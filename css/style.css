@@ -1,5 +1,106 @@
+:root {
+  --color-progress: #23C426;
+  --color-border-btn-progress-next: #09940c;
+  --color-background-progress: #E0E0E0;
+  --color-white: #FFFFFF;
+  --color-button-disabled: gray;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  position: fixed;
+  min-width: 25em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+progress {
+  width: 100%;
+  height: 1.25em;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--color-progress);
+}
+
+progress::-moz-progress-value {
+  background-color: var(--color-progress);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--color-progress);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--color-background-progress);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+button {
+  padding: .5em 1em;
+  border-radius: .5em;
+}
+
+button:nth-child(1) {
+  color: var(--color-progress);
+  font-weight: bold;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-progress);
+  transition: calc(.5s);
+}
+
+button:nth-child(1):not(:disabled):hover {
+  color: var(--color-white);
+  background-color: var(--color-progress);
+  transition: calc(.5s);
+}
+
+button:nth-child(2) {
+  color: var(--color-white);
+  background-color: var(--color-progress);
+  border: 2px solid var(--color-progress);
+  transition: calc(.5s);
+}
+
+button:nth-child(2):not(:disabled):hover {
+  background-color: var(--color-border-btn-progress-next);
+  transition: calc(.5s);
+}
+
+button[disabled] {
+  background-color: var(--color-button-disabled);
+  border: 2px solid var(--color-button-disabled);
+  color: var(--color-white);
 }
