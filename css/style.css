@@ -104,3 +104,19 @@ button[disabled] {
   border: 2px solid var(--color-button-disabled);
   color: var(--color-white);
 }
+
+@media (min-width: 125px) and (max-width: 224px) {
+  .progress-section {
+    min-width: 10em;
+  }
+}
+@media (min-width: 225px) and (max-width: 424px) {
+  .progress-section {
+    min-width: 15em;
+  }
+}
+@media (min-width: 425px) and (max-width: 525px) {
+  .progress-section {
+    min-width: 20em;
+  }
+}
