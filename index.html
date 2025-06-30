@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Progresso</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Barra de Progresso</h1>
+        <section class="branding-area">
+            <a target="_blank" class="branding-text" href="https://www.linkedin.com/in/gustavodsrosa/">Meu LinkedIn</a>
+            <span class="branding-text">|</span>
+            <span class="branding-text">Feito por Gustavo Rosa</span>
+        </section>
+        <section class="progress-section">
+            <progress id="progress" value="5" min="0" max="100"></progress>
+            <section class="buttons">
+                <button type="button" id="go-back" onclick="goBack()">Voltar</button>
+                <button type="button" id="next" onclick="next()">Próximo</button>
+            </section>
+        </section>
+
+    </section>
+</body>
+
+</html>
